@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "MS Seminar practice",
+    "version":"0.2",
+
+    "description": "MemoSquare Seminar - chrome extenstion 02",
+    "icons": {
+        "128": "icon/icon128.png"
+    },
+    "browser_action": {
+        "default_title": "practice 02",
+        "default_icon": {
+            "19": "icon/icon16.png"
+        }
+    },
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["content-script.js"]
+    }],
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "<all_urls>"
+    ]
+}
